@@ -1,0 +1,16 @@
+backend:
+  component: "@serverless/tencent-egg"
+  inputs:
+    code: ./backend/init
+    functionName: backend
+    # 这里必须指定一个具有操作 mysql 和 redis 的角色，具体角色创建，可访问 https://console.cloud.tencent.com/cam/role
+    role: CODING_QCSRole
+    functionConf:
+      timeout: 120
+      # 这里的私有网络必须和 mysql、redis 实例一致
+      vpcConfig:
+        vpcId: vpc-xxx
+        subnetId: subnet-xxx
+    apigatewayConf:
+      protocols:
+        - https
