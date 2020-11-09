@@ -2,9 +2,13 @@
 .DS_Store
 Thumbs.db
 
+
 # backend
 /backend/init/node_modules
 /backend/init/package-lock.json
+# 连接配置
+/backend/init/config/sequelize.js
+
 
 # frontend
 /frontend/node_modules
